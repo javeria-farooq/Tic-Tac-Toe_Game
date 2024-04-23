@@ -86,12 +86,6 @@ const checkWinner = () => {
             if(pos1Val === pos2Val && pos2Val === pos3Val) {
                 showWinner(pos1Val)
             }
-
-            else if(count === 9 && pos1Val !== pos2Val && pos2Val !== pos3Val){
-                msg.innerText = `Oops! Game was draw`
-                msgContainer.classList.remove("hide")
-                disableBoxes()
-            }
         }
         /*console.log(pattern[0], pattern[1], pattern[2])
         console.log(pattern[0], pattern[1], pattern[2])
@@ -129,13 +123,11 @@ const resetGame = () => {
     msgContainer.classList.add("hide")
 }
 
-
-newGameBtn.addEventListener("click", resetGame)
-resetBtn.addEventListener("click", resetGame)
-
-
 const gameDraw = () => {
     msg.innerText = `Oops! Game was draw`
     msgContainer.classList.remove("hide")
     disableBoxes()
 }
+
+newGameBtn.addEventListener("click", resetGame)
+resetBtn.addEventListener("click", resetGame)
